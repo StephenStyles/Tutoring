@@ -1,0 +1,163 @@
+\documentclass[12pt]{article}
+
+\usepackage{bm,amsthm,amssymb,amsfonts,mathtools}
+\usepackage[margin=1in]{geometry} 
+\usepackage{dsfont}
+% neural net drawing
+\usepackage{tikz}
+\usetikzlibrary{positioning}
+
+\usepackage{neuralnetwork}
+
+% macros
+\newcommand{\norm}[1]{\left\lVert#1\right\rVert}
+
+\usepackage{amsmath,amssymb,amsthm,amsfonts,amscd}
+\usepackage{showlabels}
+\usepackage{color}
+\usepackage{hyperref}
+\usepackage[numeric]{amsrefs}
+\usepackage{graphicx}
+
+\usepackage[framemethod=TikZ]{mdframed}
+%\usepackage[framemethod=default]{mdframed}
+
+
+%\mdfdefinestyle{box}{%
+%rightline=true,
+%innerleftmargin=10,
+%innerrightmargin=10,
+%frametitlerule=true,
+%frametitlerulecolor=blue,
+%frametitlebackgroundcolor=white,
+%frametitlerulewidth=2pt}
+
+\mdfdefinestyle{TheoremFrame}{%
+    linecolor=blue,
+    outerlinewidth=1,
+    roundcorner=15,
+    innertopmargin= \baselineskip,
+    innerbottommargin= \baselineskip,
+    innerrightmargin=10,
+    innerleftmargin=10,
+    backgroundcolor=white}
+    
+\mdfdefinestyle{ProofFrame}{%
+    linecolor=red,
+    outerlinewidth=1,
+    roundcorner=15,
+    innertopmargin= \baselineskip,
+    innerbottommargin= \baselineskip,
+    innerrightmargin=10,
+    innerleftmargin=10,
+    backgroundcolor=white}
+    
+    
+\setlength{\oddsidemargin}{0cm}
+\setlength{\evensidemargin}{0cm}
+\setlength{\marginparwidth}{0in}
+\setlength{\marginparsep}{0in}
+\setlength{\marginparpush}{0in}
+\setlength{\topmargin}{0in}
+\setlength{\headheight}{0pt}
+\setlength{\headsep}{0pt}
+\setlength{\footskip}{.3in}
+\setlength{\textheight}{9.2in}
+\setlength{\textwidth}{6.0in}
+\setlength{\parskip}{0.25pt}
+\setlength{\parindent}{0.25in}
+
+    
+\newlength\tindent
+\setlength{\tindent}{\parindent}
+\setlength{\parindent}{0pt}
+\renewcommand{\indent}{\hspace*{\tindent}}
+
+\newtheorem*{nthm}{Theorem}
+\newtheorem*{nlem}{Lemma}
+\newtheorem*{nprop}{Proposition}
+\newtheorem*{ncor}{Corollary}
+\newtheorem*{nconj}{Conjecture}
+\newtheorem*{nclaim}{Claim}
+\theoremstyle{remark}
+\newtheorem*{define}{Definition}
+\newtheorem*{nrem}{Remarks}
+\newtheorem*{notation}{Notation}
+\newtheorem*{note}{Note}
+\newtheorem*{ex}{Example}
+\newtheorem*{imt}{Important}
+\newtheorem*{fact}{Fact}
+\newcommand{\vs}{\vspace{0.1in}}
+\newcommand{\Lim}[1]{\raisebox{0.5ex}{\scalebox{0.8}{$\displaystyle \lim_{#1}\;$}}}
+\title{Sample Midterm}
+\author{Stephen Styles}
+\begin{document}
+\maketitle
+
+\begin{enumerate}
+
+\item Find the limit if it exists:
+\begin{enumerate}
+
+\item $\displaystyle{\lim_{x \rightarrow -\infty} \frac{5x-3}{\sqrt{9x^2+6}}}$
+\vspace{5cm}
+
+\item $\displaystyle{\lim_{x \rightarrow 5} \frac{\sqrt{x^2+11}-6}{x-5}}$
+\vspace{5cm}
+
+\item $\displaystyle{\lim_{x \rightarrow 0} 6x^2 \cot(3x) \csc(2x)}$
+\end{enumerate}
+\newpage
+
+\item Is the function $\displaystyle{ f(x) = \frac{1}{e^{2x}+\sin(x)-100}}$ continuous?
+\vspace{5cm}
+
+\item Find the domain of the function $\displaystyle{ f(x) = \frac{\ln(x-3)}{\sqrt{9-x}}}$
+\vspace{5cm}
+
+\item Show that $\displaystyle{\lim_{x \rightarrow 0^+} \sqrt{x}\bigg( 1 - \sin^2\bigg(\frac{2\pi}{x}\bigg)\bigg)=0}$
+\newpage
+
+\item \begin{enumerate}
+\item State the formal definition of a derivative.
+\vspace{3cm}
+\item Using the formal definition of a derivative, find the derivative of $\displaystyle{f(x) = \sqrt{x-5}}$
+\end{enumerate}
+\newpage
+
+\item Suppose c is a constant and the function f is given by:
+\[ f(x) = \begin{cases} 
+      c^x & x<1 \\
+      3cx-2 & x \geq 1 \\
+   \end{cases}
+\]
+\begin{enumerate}
+\item Calculate $\displaystyle{ \lim_{x \rightarrow 1^-} f(x)}$ and $\displaystyle{ \lim_{x \rightarrow 1^+} f(x)}$.
+\item Find all values of $c$ so that the function $f(x)$ is continuous everywhere.
+\end{enumerate}
+\newpage
+\item Find the derivative of the following functions but \textbf{DO NOT} simplify your answers:
+\begin{enumerate}
+\item $\displaystyle{ f(x) = \frac{e^x}{\sin(x^2)}}$
+\vspace{6cm}
+
+\item $\displaystyle{ f(x) = 2^{\csc(x)} \cdot \cot(-5x)}$
+\vspace{6cm}
+
+\item $\displaystyle{ f(x) = \sec^2\bigg(e^{\tan(\sqrt{x})}\bigg)}$
+\end{enumerate}
+\newpage
+\item A poster is to have an area of $600 \text{ in}^2$ with $1$ inch margins at
+the bottom and sides and a $2$ inch margin on top. What dimensions will
+give the largest printed area?
+\newpage
+\item Use implicit differentiation to find the derivative of $ \displaystyle{ x\cdot \tan(y) = xy+\cos(xy)}$
+\vspace{8cm}
+\item Find the equation of the tangent line to the graph of $y = \tan(2x) + 3\sec(x)$ at the point $(0,3)$.
+\newpage
+
+\item Make a detailed graph of $\displaystyle{ f(x) = \frac{4x}{x^2+1}}$
+\end{enumerate}
+
+
+\end{document}

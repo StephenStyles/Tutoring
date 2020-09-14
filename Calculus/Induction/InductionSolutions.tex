@@ -1,0 +1,302 @@
+\documentclass[12pt]{article}
+
+\usepackage{bm,amsthm,amssymb,amsfonts,mathtools}
+\usepackage[margin=1in]{geometry} 
+\usepackage{dsfont}
+% neural net drawing
+\usepackage{tikz}
+\usetikzlibrary{positioning}
+
+\usepackage{neuralnetwork}
+
+% macros
+\newcommand{\norm}[1]{\left\lVert#1\right\rVert}
+
+\usepackage{amsmath,amssymb,amsthm,amsfonts,amscd}
+\usepackage{showlabels}
+\usepackage{color}
+\usepackage{hyperref}
+\usepackage[numeric]{amsrefs}
+\usepackage{graphicx}
+
+\usepackage[framemethod=TikZ]{mdframed}
+%\usepackage[framemethod=default]{mdframed}
+
+
+%\mdfdefinestyle{box}{%
+%rightline=true,
+%innerleftmargin=10,
+%innerrightmargin=10,
+%frametitlerule=true,
+%frametitlerulecolor=blue,
+%frametitlebackgroundcolor=white,
+%frametitlerulewidth=2pt}
+
+\mdfdefinestyle{TheoremFrame}{%
+    linecolor=blue,
+    outerlinewidth=1,
+    roundcorner=15,
+    innertopmargin= \baselineskip,
+    innerbottommargin= \baselineskip,
+    innerrightmargin=10,
+    innerleftmargin=10,
+    backgroundcolor=white}
+    
+\mdfdefinestyle{ProofFrame}{%
+    linecolor=red,
+    outerlinewidth=1,
+    roundcorner=15,
+    innertopmargin= \baselineskip,
+    innerbottommargin= \baselineskip,
+    innerrightmargin=10,
+    innerleftmargin=10,
+    backgroundcolor=white}
+    
+    
+\setlength{\oddsidemargin}{0cm}
+\setlength{\evensidemargin}{0cm}
+\setlength{\marginparwidth}{0in}
+\setlength{\marginparsep}{0in}
+\setlength{\marginparpush}{0in}
+\setlength{\topmargin}{0in}
+\setlength{\headheight}{0pt}
+\setlength{\headsep}{0pt}
+\setlength{\footskip}{.3in}
+\setlength{\textheight}{9.2in}
+\setlength{\textwidth}{6.0in}
+\setlength{\parskip}{0.25pt}
+\setlength{\parindent}{0.25in}
+
+    
+\newlength\tindent
+\setlength{\tindent}{\parindent}
+\setlength{\parindent}{0pt}
+\renewcommand{\indent}{\hspace*{\tindent}}
+
+\newtheorem*{nthm}{Theorem}
+\newtheorem*{nlem}{Lemma}
+\newtheorem*{nprop}{Proposition}
+\newtheorem*{ncor}{Corollary}
+\newtheorem*{nconj}{Conjecture}
+\newtheorem*{nclaim}{Claim}
+\theoremstyle{remark}
+\newtheorem*{define}{Definition}
+\newtheorem*{nrem}{Remarks}
+\newtheorem*{notation}{Notation}
+\newtheorem*{note}{Note}
+\newtheorem*{ex}{Example}
+\newtheorem*{imt}{Important}
+\newtheorem*{fact}{Fact}
+\newcommand{\vs}{\vspace{0.1in}}
+\newcommand{\Lim}[1]{\raisebox{0.5ex}{\scalebox{0.8}{$\displaystyle \lim_{#1}\;$}}}
+\title{Induction}
+\author{Stephen Styles}
+\begin{document}
+\maketitle
+
+\begin{enumerate}
+
+\item Prove by induction that $\displaystyle{\sum_{k=1}^n k = \frac{n(n+1)}{2}}$
+\begin{mdframed}[style=TheoremFrame]
+\textit{Solution:}\\
+
+Step 1: Base case where $k=1$
+\begin{align*}
+\sum_{k=1}^1 k = 1 &= \frac{1(1+1)}{2}\\
+&= 1
+\end{align*}
+Step 2: Assume true for $n$\\
+
+Step 3: Prove for $n+1$
+\begin{align*}
+\sum_{k=1}^{n+1} k &= \sum_{k=1}^{n} k + n+1\\
+&= \frac{n(n+1)}{2} + n+1\\
+&= \frac{n^2+n)}{2} + \frac{2n+2}{2}\\
+&= \frac{n^2 + 3n + 2}{n}\\
+&= \frac{(n+1)(n+2)}{2}\\
+&= \frac{(n+1)\big((n+1)+1\big)}{2}
+\end{align*}
+Therefore by induction, $\displaystyle{\sum_{k=1}^n k = \frac{n(n+1)}{2}}$
+\end{mdframed}
+\newpage
+\item Prove by induction that $\displaystyle{\sum_{k=1}^n k^2 = \frac{n(n+1)(2n+1)}{6}}$
+\begin{mdframed}[style=TheoremFrame]
+\textit{Solution:}\\
+
+Step 1: Base case where $k=1$
+\begin{align*}
+\sum_{k=1}^1 k^2 = 1^2 &= \frac{1(1+1)(2\cdot1+1)}{6}\\
+&= 1
+\end{align*}
+Step 2: Assume true for $n$\\
+
+Step 3: Prove for $n+1$
+\begin{align*}
+\sum_{k=1}^{n+1} k^2 &= \sum_{k=1}^{n} k^2 + (n+1)^2\\
+&= \frac{n(n+1)(2n+1)}{6} + (n+1)^2\\
+&= (n+1)\bigg( \frac{n(2n+1)}{6} + \frac{6(n+1)}{6}\bigg)\\
+&= (n+1)\bigg( \frac{2n^2+n)}{6} + \frac{6n+6}{6}\bigg)\\
+&= (n+1)\bigg( \frac{2n^2+7n+6}{6}\bigg)\\
+&= (n+1)\bigg( \frac{(n+2)(2n+3)}{6}\bigg)\\
+&= \frac{(n+1)\big((n+1)+1\big)\big(2(n+1)+1\big)}{6}
+\end{align*}
+Therefore by induction, $\displaystyle{\sum_{k=1}^n k^2 = \frac{n(n+1)(2n+1)}{6}}$
+\end{mdframed}
+\newpage
+\item Prove by induction that $n^3-n$ is divisible by $3$ for all positive integers.
+\begin{mdframed}[style=TheoremFrame]
+\textit{Solution:}\\
+
+Step 1: Let $n=1$ then $1^3 - 1 = 0$ which is divisible by $3$.\\
+
+Step 2: Assume true for $n$.\\
+
+Step 3: Prove for $n+1$
+
+\begin{align*}
+(n+1)^3 - (n+1) &= (n^3 + 3n^2 + 3n + 1) - (n+1)\\
+&= n^3 -n + 3n^2 + 3n
+\end{align*}
+By our assumption $n^3-n$ is divisible by $3$ and $ 3n^2 + 3n$ is divisible by $3$, therefore $n^3 -n + 3n^2 + 3n$ is divisible by $3$. Therefore $(n+1)^3 - (n+1)$ is divisible by $3$.\\
+
+So by induction $n^3-n$ is divisible by $3$ for all positive integers.
+\end{mdframed}
+\newpage
+\item Prove that the sequence $\displaystyle{x_{n+1} = \frac{x_n + \sqrt{3x_n}}{2}}$ is an increasing sequence where $x_1 =1 $.
+\begin{mdframed}[style=TheoremFrame]
+\textit{Solution:}\\
+
+Step 1: Base case $x_2 =\displaystyle{ \frac{x_1 + \sqrt{3x_1}}{2} = \frac{1+\sqrt{3}}{2} > 1 = x_1}$\\
+
+Step 2: Assume up $x_n > x_{n-1}$\\
+
+Step 3: Prove $x_{n+1} > x_n$\\
+
+Since: 
+\begin{align*}
+x_n &> x_{n-1}\\
+\Rightarrow 3x_n &> 3x_{n-1}\\
+\Rightarrow \sqrt{3x_n} &> \sqrt{3x_{n-1}}
+\end{align*}
+Because $\sqrt{x}$ is a monotonically increasing function.
+
+Then
+\begin{align*}
+x_{n+1} &= \frac{x_n +  \sqrt{3x_n}}{2}\\
+&> \frac{x_{n-1} +  \sqrt{3x_{n-1}}}{2} = x_n\\
+\end{align*}
+Therefore $x_{n+1} > x_n$. Thus by induction the sequence $\{ x_n \}$ is an increasing sequence.
+\end{mdframed}
+\newpage
+\item Prove that $n! > 2^n$ for all positive integers greater than or equal to $4$. 
+
+\begin{mdframed}[style=TheoremFrame]
+\textit{Solution:}\\
+
+Step 1: Base case $4! = 4 \cdot 3 \cdot 2 = 24$, and $2^4 = 16$. Therefore $4! > 2^4$.\\
+
+Step 2: Assume up to $n$.\\
+
+Step 3: Prove for $n+1$.\\
+
+\begin{align*}
+(n+1)! &= (n+1)\cdot n!\\
+&> (n+1)\cdot 2^n\\
+&> 2 \cdot 2^n\\
+&> 2^{n+1}
+\end{align*}
+Therefore by induction $n! > 2^n$ for all positive integers greater than or equal to $4$. 
+\end{mdframed}
+\newpage
+\item Prove that for any real number $x>-1$ and any positive integer $n$,\\ $(1+x)^n \geq 1 + nx$.
+\begin{mdframed}[style=TheoremFrame]
+\textit{Solution:}\\
+
+Step 1: Base case for $n=1$, $(1+x)^1 = 1+x = 1 + 1\cdot x$.\\
+
+Step 2: Assume up to $n$.\\
+
+Step 3: Prove for $n+1$\\
+
+\begin{align*}
+(1+x)^{n+1} &= (1+x)^n(1+x)\\
+&\geq (1+nx)(1+x)\\
+&= 1 + x + nx + nx^2\\
+&= 1 + (n+1)x + nx^2\\
+&>  1 + (n+1)x \text{ since } nx^2>0
+\end{align*}
+Therefore by induction for any real number $x>-1$ and any positive\\ integer $n$, $(1+x)^n \geq 1 + nx$.
+\end{mdframed}
+\newpage
+\item  Using induction, prove that the sequence  $\displaystyle{a_{n+1} = \frac{2a_n}{3+a_n}}$ is monotone with\\ $a_1 = 1$ and bounded below by $0$.
+\begin{mdframed}[style=TheoremFrame]
+\textit{Solution:}\\
+
+Step 1: Base case
+\begin{align*}
+a_2 &= \frac{2a_1}{3+a_1}\\
+&= \frac{2}{3+1}\\
+&= \frac{1}{2}\\
+&> 0 
+\end{align*}
+
+Step 2: Assume true for $n$, i.e. $a_n >0$.\\
+
+Step 3: Prove $a_{n-1} > 0$
+\begin{align*}
+a_{n+1} = \frac{2a_n}{3+a_n}\\
+\end{align*}
+Where $2a_n > 0$ and $3+a_n>0$, therefore $a_{n+1}>0$. So by induction we know that all $a_n >0$.\\
+
+To solve that the sequence is monotone we check
+\begin{align*}
+a_{n+1} - a_n &= \frac{2a_n}{3+a_n} - a_n\\
+&= \frac{2a_n}{3+a_n}-\frac{3a_n + {a_n}^2}{3+a_n}\\
+&= \frac{-a_n-{a_n}^2}{3+a_n}\\
+&<0
+\end{align*}
+Therefore, we have a sequence $\{a_n\}$ where each $a_n >0$ and $a_{n-1} - a_n < 0$. So our sequence is monotonically decreasing.
+\end{mdframed}
+\newpage
+\item A sequence $\{ a_n \}$ is given by $a_1 = \sqrt{2}$, $\displaystyle{a_n = \sqrt{2+a_{n-1}}}$
+\begin{enumerate}
+\item Show by induction that $\{ a_n \}$ is increasing and bounded above by $3$.
+
+\begin{mdframed}[style=TheoremFrame]
+\textit{Solution:}
+
+Step 1: Base case $a_1 = \sqrt{2}$, $a_2 = \sqrt{2+ a_1} = \sqrt{2+\sqrt{2}}$\\
+Thus $a_1 < a_2 < 3$.\\
+
+Step 2: Assume $a_{n-1}<a_n<3$\\
+
+Step 3: Prove $a_n < a_{n+1} < 3$
+\begin{align*}
+a_{n-1} &< a_{n} < 3\\
+2+a_{n-1} &< 2+a_{n} < 2+3\\
+\sqrt{2+a_{n-1}} &< \sqrt{2+a_{n}} < \sqrt{3+2}\\
+a_{n}&<a_{n+1}<\sqrt{5}<3
+\end{align*}
+Therefore by induction we see that $\{ a_n \}$ is an increasing sequence bounded above by $3$.
+\end{mdframed}
+\item Find $\displaystyle{ \lim_{a \rightarrow \infty} a_n}$.
+\begin{mdframed}[style=TheoremFrame]
+\textit{Solution:}
+
+Since our sequence is always increasing and has an upper bound, by the Monotone Convergence Theorem, a limit must exist.
+\begin{align*}
+\lim_{n\rightarrow \infty} a_n &= \lim_{n\rightarrow \infty} \sqrt{2+a_{n-1}}\\
+&= \sqrt{2+\lim_{n\rightarrow \infty}a_{n-1}}\\
+\Rightarrow L &= \sqrt{2+L}\\
+\Rightarrow L^2 &= L+2\\
+ \Rightarrow L^2 &- L -2 =0\\
+\Rightarrow (L+1)&(L-2) =0
+\end{align*}
+Therefore, the limit either equals $-1$ or $2$. But since all sequence starts at $\sqrt{2}$ and is always increasing, we see that our limit must be $2$.
+
+That is $\displaystyle{ \lim_{n\rightarrow \infty} a_n = 2}$.
+\end{mdframed}
+\end{enumerate}
+\end{enumerate}
+
+\end{document}

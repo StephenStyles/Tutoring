@@ -1,0 +1,109 @@
+\documentclass[12pt]{article}
+
+\usepackage{bm,amsthm,amssymb,amsfonts,mathtools}
+\usepackage[margin=1in]{geometry} 
+\usepackage{dsfont}
+% neural net drawing
+\usepackage{tikz}
+\usetikzlibrary{positioning}
+
+\usepackage{neuralnetwork}
+
+% macros
+\newcommand{\norm}[1]{\left\lVert#1\right\rVert}
+
+\usepackage{amsmath,amssymb,amsthm,amsfonts,amscd}
+\usepackage{showlabels}
+\usepackage{color}
+\usepackage{hyperref}
+\usepackage[numeric]{amsrefs}
+\usepackage{graphicx}
+
+\usepackage[framemethod=TikZ]{mdframed}
+%\usepackage[framemethod=default]{mdframed}
+
+
+%\mdfdefinestyle{box}{%
+%rightline=true,
+%innerleftmargin=10,
+%innerrightmargin=10,
+%frametitlerule=true,
+%frametitlerulecolor=blue,
+%frametitlebackgroundcolor=white,
+%frametitlerulewidth=2pt}
+
+\mdfdefinestyle{TheoremFrame}{%
+    linecolor=blue,
+    outerlinewidth=1,
+    roundcorner=15,
+    innertopmargin= \baselineskip,
+    innerbottommargin= \baselineskip,
+    innerrightmargin=10,
+    innerleftmargin=10,
+    backgroundcolor=white}
+    
+\mdfdefinestyle{ProofFrame}{%
+    linecolor=red,
+    outerlinewidth=1,
+    roundcorner=15,
+    innertopmargin= \baselineskip,
+    innerbottommargin= \baselineskip,
+    innerrightmargin=10,
+    innerleftmargin=10,
+    backgroundcolor=white}
+    
+    
+\setlength{\oddsidemargin}{0cm}
+\setlength{\evensidemargin}{0cm}
+\setlength{\marginparwidth}{0in}
+\setlength{\marginparsep}{0in}
+\setlength{\marginparpush}{0in}
+\setlength{\topmargin}{0in}
+\setlength{\headheight}{0pt}
+\setlength{\headsep}{0pt}
+\setlength{\footskip}{.3in}
+\setlength{\textheight}{9.2in}
+\setlength{\textwidth}{6.0in}
+\setlength{\parskip}{0.25pt}
+\setlength{\parindent}{0.25in}
+
+    
+\newlength\tindent
+\setlength{\tindent}{\parindent}
+\setlength{\parindent}{0pt}
+\renewcommand{\indent}{\hspace*{\tindent}}
+
+\newtheorem*{nthm}{Theorem}
+\newtheorem*{nlem}{Lemma}
+\newtheorem*{nprop}{Proposition}
+\newtheorem*{ncor}{Corollary}
+\newtheorem*{nconj}{Conjecture}
+\newtheorem*{nclaim}{Claim}
+\theoremstyle{remark}
+\newtheorem*{define}{Definition}
+\newtheorem*{nrem}{Remarks}
+\newtheorem*{notation}{Notation}
+\newtheorem*{note}{Note}
+\newtheorem*{ex}{Example}
+\newtheorem*{imt}{Important}
+\newtheorem*{fact}{Fact}
+\newcommand{\vs}{\vspace{0.1in}}
+\newcommand{\Lim}[1]{\raisebox{0.5ex}{\scalebox{0.8}{$\displaystyle \lim_{#1}\;$}}}
+\title{Related Rates}
+\author{Stephen Styles}
+\begin{document}
+\maketitle
+
+
+\begin{enumerate}
+\item A dump-truck is pouring sand onto a pile at a rate of $0.5m^3/\text{min}$. The pile of sand is the shape of a cone whose base is always the same length as the height. How fast is the pile increasing when the height is $4\text{cm}$.
+\vspace{7cm}
+\item A baseball player is currently on first base. He starts running from first base to second base at a rate of $30\text{feet}/\text{sec}$. How fast is the distance between him and homeplate changing when the player is $45$ feet off first base?
+\newpage
+\item A spherical snowball melts at a rate of $2\pi \text{cm}^3/\text{hr}$. It melts symmetrically such that it is always a sphere. How fast is its radius changing at the instant $r=10$.
+\vspace{8cm}
+\item A tank of water the shape of a cone is being drained with water at a rate of $15m^3/\text{min}$. The base radius is $27$ meters and the height is $9$ meters. At what rate is the depth of water changing when the radius of the top of the water is $10$ meters.
+\newpage
+\item The angle of elevation is the angle formed by a horizontal line and a line joining the observers eye to an object above the horizontal line. A person is $5$km away from a launch pad for a rocket. The rocket is blasting off at a rate of $8$km/s. At what rate is the angle of elevation $\theta$, changing when the rocket is $40$km above the ground.
+\end{enumerate}
+\end{document}
