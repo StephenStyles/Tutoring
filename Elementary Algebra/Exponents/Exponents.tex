@@ -1,0 +1,154 @@
+\documentclass[16pt]{article}
+
+\usepackage{array,amsmath,amssymb,amsthm,amsfonts,amscd}
+\usepackage{showlabels}
+\usepackage{color}
+\usepackage{hyperref}
+\usepackage[numeric]{amsrefs}
+\usepackage{graphicx}
+
+\usepackage[framemethod=TikZ]{mdframed}
+%\usepackage[framemethod=default]{mdframed}
+
+
+%\mdfdefinestyle{box}{%
+%rightline=true,
+%innerleftmargin=10,
+%innerrightmargin=10,
+%frametitlerule=true,
+%frametitlerulecolor=blue,
+%frametitlebackgroundcolor=white,
+%frametitlerulewidth=2pt}
+
+\mdfdefinestyle{TheoremFrame}{%
+    linecolor=blue,
+    outerlinewidth=1,
+    roundcorner=15,
+    innertopmargin= \baselineskip,
+    innerbottommargin= \baselineskip,
+    innerrightmargin=10,
+    innerleftmargin=10,
+    backgroundcolor=white}
+    
+\mdfdefinestyle{ProofFrame}{%
+    linecolor=red,
+    outerlinewidth=1,
+    roundcorner=15,
+    innertopmargin= \baselineskip,
+    innerbottommargin= \baselineskip,
+    innerrightmargin=10,
+    innerleftmargin=10,
+    backgroundcolor=white}
+    
+    
+\setlength{\oddsidemargin}{0cm}
+\setlength{\evensidemargin}{0cm}
+\setlength{\marginparwidth}{0in}
+\setlength{\marginparsep}{0in}
+\setlength{\marginparpush}{0in}
+\setlength{\topmargin}{0in}
+\setlength{\headheight}{0pt}
+\setlength{\headsep}{0pt}
+\setlength{\footskip}{.3in}
+\setlength{\textheight}{9.2in}
+\setlength{\textwidth}{6.0in}
+\setlength{\parskip}{0.25pt}
+\setlength{\parindent}{0.25in}
+
+    
+\newlength\tindent
+\setlength{\tindent}{\parindent}
+\setlength{\parindent}{0pt}
+\renewcommand{\indent}{\hspace*{\tindent}}
+
+\newtheorem*{nthm}{Theorem}
+\newtheorem*{nlem}{Lemma}
+\newtheorem*{nprop}{Proposition}
+\newtheorem*{ncor}{Corollary}
+\newtheorem*{nconj}{Conjecture}
+\newtheorem*{nclaim}{Claim}
+\theoremstyle{remark}
+\newtheorem*{define}{Definition}
+\newtheorem*{nrem}{Remarks}
+\newtheorem*{notation}{Notation}
+\newtheorem*{note}{Note}
+\newtheorem*{ex}{Example}
+\newtheorem*{imt}{Important}
+\newtheorem*{fact}{Fact}
+\newcommand{\vs}{\vspace{0.1in}}
+\newcommand{\Lim}[1]{\raisebox{0.5ex}{\scalebox{0.8}{$\displaystyle \lim_{#1}\;$}}}
+\newcolumntype{M}[1]{>{\centering\arraybackslash}m{#1}}
+\newcolumntype{N}{@{}m{0pt}@{}}
+\renewcommand{\arraystretch}{2.5}
+\title{Exponents}
+
+\author{Stephen Styles}
+
+
+\begin{document}
+\maketitle
+
+Laws of Exponents:\\
+
+\begin{table}[h!]
+\centering
+\caption{For $a\not= 0$, $b \not= 0$}
+\begin{tabular}{||>{\centering\arraybackslash}m{1.5in} | M{1.5in}|| N } 
+ \hline
+ Product Rule & $\displaystyle{a^x \cdot a^y = a^{x+y}}$ &\\
+ \hline
+ Quotient Rule & $\displaystyle{\frac{a^x}{a^y}=a^{x-y}}$&\\
+ \hline
+ Power Rule & $\displaystyle{(a^x)^y = a^{xy}}$\\
+ \hline
+ Power of a Product Rule & $\displaystyle{(ab)^x = a^x b^x}$&\\ 
+ \hline
+ Power of a Fraction Rule & $\displaystyle{\bigg(\frac{a}{b}\bigg)^x = \frac{a^x}{b^x}}$&\\
+ \hline
+ Zero Exponent &$\displaystyle{a^0 = 1}$&\\
+ \hline
+ Negative Exponent & $\displaystyle{a^{-x} = \frac{1}{a^x}}$ &\\
+ \hline
+ Fractional Exponent & $\displaystyle{a^{x/y} = \sqrt[y]{a^x}}$&\\
+ \hline
+\end{tabular}
+\end{table}
+
+Examples:
+\begin{enumerate}
+\item  Write in $\displaystyle{\frac{3^3 \cdot 3^2 \cdot 3^{-1}}{3^6}}$ in the simplest form.
+\begin{mdframed}[style=TheoremFrame]
+\textit{Solution}:
+\begin{align*}
+\frac{3^3 \cdot 3^2 \cdot 3^{-1}}{3^6} &= 3^{3+2-1-6}\\
+&= 3^{-2}\\
+&= \frac{1}{3^2}\\
+&= \frac{1}{9}
+\end{align*}
+\end{mdframed}
+\newpage
+\item Write in $\displaystyle{\frac{2^3 (4\cdot 5)^3}{2^5 \cdot5^4}}$ in the simplest form.
+\begin{mdframed}[style=TheoremFrame]
+\textit{Solution}:
+\begin{align*}
+\frac{2^3 (4\cdot 5)^3}{2^5 \cdot 5^4} &= \frac{2^3 \cdot 4^3 \cdot 5^3}{2^5 \cdot 5^4}\\
+&= \frac{2^3 \cdot (2^2)^3 \cdot 5^3}{2^5 \cdot 5^4}\\
+&= \frac{2^3 \cdot 2^6 \cdot 5^3}{2^5 \cdot 5^4}\\
+&= 2^{3+6-5} \cdot 5^{3-4}\\
+&= 2^4 \cdot 5^{-1}\\
+&= \frac{2^4}{5}\\
+&= \frac{16}{5}
+\end{align*}
+\end{mdframed}
+\item Write in $\displaystyle{\frac{5^{2/3} \cdot 5^{1/4}}{5^{11/12}}}$
+\begin{mdframed}[style=TheoremFrame]
+\textit{Solution}:
+\begin{align*}
+\frac{5^{2/3} \cdot 5^{1/4}}{5^{11/12}} &= 5^{2/3 + 1/4 - 11/12}\\
+&= 5^{8/12 + 3/12 - 11/12}\\
+&= 5^0\\
+&=1
+\end{align*}
+\end{mdframed}
+\end{enumerate}
+\end{document}
