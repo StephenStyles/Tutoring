@@ -1,0 +1,147 @@
+\documentclass[16pt]{article}
+
+\usepackage{amsmath,amssymb,amsthm,amsfonts,amscd}
+\usepackage{showlabels}
+\usepackage{color}
+\usepackage{hyperref}
+\usepackage[numeric]{amsrefs}
+\usepackage{graphicx}
+
+\usepackage[framemethod=TikZ]{mdframed}
+%\usepackage[framemethod=default]{mdframed}
+
+
+%\mdfdefinestyle{box}{%
+%rightline=true,
+%innerleftmargin=10,
+%innerrightmargin=10,
+%frametitlerule=true,
+%frametitlerulecolor=blue,
+%frametitlebackgroundcolor=white,
+%frametitlerulewidth=2pt}
+
+\mdfdefinestyle{TheoremFrame}{%
+    linecolor=blue,
+    outerlinewidth=1,
+    roundcorner=15,
+    innertopmargin= \baselineskip,
+    innerbottommargin= \baselineskip,
+    innerrightmargin=10,
+    innerleftmargin=10,
+    backgroundcolor=white}
+    
+\mdfdefinestyle{ProofFrame}{%
+    linecolor=red,
+    outerlinewidth=1,
+    roundcorner=15,
+    innertopmargin= \baselineskip,
+    innerbottommargin= \baselineskip,
+    innerrightmargin=10,
+    innerleftmargin=10,
+    backgroundcolor=white}
+    
+    
+\setlength{\oddsidemargin}{0cm}
+\setlength{\evensidemargin}{0cm}
+\setlength{\marginparwidth}{0in}
+\setlength{\marginparsep}{0in}
+\setlength{\marginparpush}{0in}
+\setlength{\topmargin}{0in}
+\setlength{\headheight}{0pt}
+\setlength{\headsep}{0pt}
+\setlength{\footskip}{.3in}
+\setlength{\textheight}{9.2in}
+\setlength{\textwidth}{6.0in}
+\setlength{\parskip}{0.25pt}
+\setlength{\parindent}{0.25in}
+
+    
+\newlength\tindent
+\setlength{\tindent}{\parindent}
+\setlength{\parindent}{0pt}
+\renewcommand{\indent}{\hspace*{\tindent}}
+
+\newtheorem*{nthm}{Theorem}
+\newtheorem*{nlem}{Lemma}
+\newtheorem*{nprop}{Proposition}
+\newtheorem*{ncor}{Corollary}
+\newtheorem*{nconj}{Conjecture}
+\newtheorem*{nclaim}{Claim}
+\theoremstyle{remark}
+\newtheorem*{define}{Definition}
+\newtheorem*{nrem}{Remarks}
+\newtheorem*{notation}{Notation}
+\newtheorem*{note}{Note}
+\newtheorem*{ex}{Example}
+\newtheorem*{imt}{Important}
+\newtheorem*{fact}{Fact}
+\newcommand{\vs}{\vspace{0.1in}}
+\newcommand{\Lim}[1]{\raisebox{0.5ex}{\scalebox{0.8}{$\displaystyle \lim_{#1}\;$}}}
+
+
+\title{Modular Arithmetic}
+
+\author{Stephen Styles}
+
+
+\begin{document}
+\maketitle
+Properties of Modular Arithmetic:\\
+Let $a_1 \equiv b_1$ mod$(n)$, $a_2 \equiv b_2$ mod$(n)$, and $a \equiv b$ mod$(n)$, then
+\begin{itemize}
+\item $a+k \equiv b+k $ mod$(n)$ for any integer $k$.
+\item $ka \equiv kb$ mod$(n)$ for any integer $k$.
+\item $a_1 + a_2 \equiv b_1 + b_2$ mod$(n)$.
+\item $a_1 - a_2 \equiv b_1 - b_2$ mod$(n)$.
+\item $a_1 a_2 \equiv b_1 b_2$ mod$(n)$.
+\item $a^k \equiv b^k$ mod$(n)$.
+\end{itemize} 
+
+The general technique when given an equation to solve with modular arithmetic is to reduce each integer to the number it's congruent to. From there we can solve the equation and find the last congruence relation.\\
+
+Examples:
+\begin{enumerate}
+\item Simplify $19^5 + 14\cdot 25-62$ mod$(6)$.
+\begin{mdframed}[style=TheoremFrame]
+\textit{Solution:}\\
+
+$19^5 \equiv 1^5$ mod$(6)$ $=1$ mod$(6)$\\
+$14 \cdot 25 \equiv 2 \cdot 1$ mod$(6)$ $= 2$ mod$(6)$\\
+$62 \equiv 2$ mod$(6)$\\
+
+$19^5 + 14\cdot 25-62$ mod$(6)$ $\equiv$ $1+2-2$ mod$(6)$ $=1$ mod$(6)$
+\end{mdframed}
+
+\item Simplify $30^4 \cdot 13 + 81$ mod$(7)$.
+\begin{mdframed}[style=TheoremFrame]
+\textit{Solution:}\\
+
+$30^4 \cdot 13 \equiv 2^4 \cdot 6$ mod$(7)$ $= 16 \cdot 6$ mod$(7)$ $\equiv 2\cdot 6$ mod$(7)$ $=12$ mod$(7)$ $\equiv 5$ mod$(7)$ \\
+$81 \equiv 4$ mod$(7)$\\
+
+$30^4 \cdot 13 + 81$ mod$(7)$ $= 5 + 4$ mod$(7)$ $=9$ mod$(7)$ $=2$ mod$(7)$
+\end{mdframed}
+\newpage
+\item Simplify $41^3 + 55 \times 36 - 29$ mod$(3)$
+\begin{mdframed}[style=TheoremFrame]
+\textit{Solution:}\\
+
+$41^3 \equiv 2^3$ mod$(3)$ $= 8$ mod$(3)$ $\equiv 2$ mod$(3)$\\
+$55 \times 36 \equiv 1 \times 0$ mod$(3)$ $= 0$ mod$(3)$\\
+$29 \equiv 1$ mod$(3)$\\
+
+$41^3 + 55 \times 36 - 29$ mod$(3) \equiv 2 + 0 - 1$ mod$(3) = 1$ mod$(3)$
+\end{mdframed}
+\end{enumerate}
+
+Examples:
+\begin{enumerate}
+\item Simplify $23+42\cdot 3 - 2$ mod$(9)$
+\vspace{5cm}
+\item Simplify $17^2 + 81^4 + 8$ mod$(5)$
+\vspace{5cm}
+\item Simplify $13^{13} + 87-61\cdot115^3$ mod$(6)$
+\end{enumerate}
+
+
+\end{document}
