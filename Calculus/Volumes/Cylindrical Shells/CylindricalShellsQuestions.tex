@@ -1,0 +1,91 @@
+\documentclass[16pt]{article}
+
+\usepackage{amsmath,amssymb,amsthm,amsfonts,amscd}
+\usepackage{showlabels}
+\usepackage{color}
+\usepackage{hyperref}
+\usepackage[numeric]{amsrefs}
+\usepackage{graphicx}
+
+\usepackage[framemethod=TikZ]{mdframed}
+%\usepackage[framemethod=default]{mdframed}
+
+
+%\mdfdefinestyle{box}{%
+%rightline=true,
+%innerleftmargin=10,
+%innerrightmargin=10,
+%frametitlerule=true,
+%frametitlerulecolor=blue,
+%frametitlebackgroundcolor=white,
+%frametitlerulewidth=2pt}
+
+\mdfdefinestyle{TheoremFrame}{%
+    linecolor=blue,
+    outerlinewidth=1,
+    roundcorner=15,
+    innertopmargin= \baselineskip,
+    innerbottommargin= \baselineskip,
+    innerrightmargin=10,
+    innerleftmargin=10,
+    backgroundcolor=white}
+    
+\mdfdefinestyle{ProofFrame}{%
+    linecolor=red,
+    outerlinewidth=1,
+    roundcorner=15,
+    innertopmargin= \baselineskip,
+    innerbottommargin= \baselineskip,
+    innerrightmargin=10,
+    innerleftmargin=10,
+    backgroundcolor=white}
+    
+    
+\setlength{\oddsidemargin}{0cm}
+\setlength{\evensidemargin}{0cm}
+\setlength{\marginparwidth}{0in}
+\setlength{\marginparsep}{0in}
+\setlength{\marginparpush}{0in}
+\setlength{\topmargin}{0in}
+\setlength{\headheight}{0pt}
+\setlength{\headsep}{0pt}
+\setlength{\footskip}{.3in}
+\setlength{\textheight}{9.2in}
+\setlength{\textwidth}{6.0in}
+\setlength{\parskip}{0.25pt}
+\setlength{\parindent}{0.25in}
+
+    
+\newlength\tindent
+\setlength{\tindent}{\parindent}
+\setlength{\parindent}{0pt}
+\renewcommand{\indent}{\hspace*{\tindent}}
+
+\newtheorem*{nthm}{Theorem}
+\newtheorem*{nlem}{Lemma}
+\newtheorem*{nprop}{Proposition}
+\newtheorem*{ncor}{Corollary}
+\newtheorem*{nconj}{Conjecture}
+\newtheorem*{nclaim}{Claim}
+\theoremstyle{remark}
+\newtheorem*{define}{Definition}
+\newtheorem*{nrem}{Remarks}
+\newtheorem*{notation}{Notation}
+\newtheorem*{note}{Note}
+\newtheorem*{ex}{Example}
+\newtheorem*{imt}{Important}
+\newtheorem*{fact}{Fact}
+\newcommand{\vs}{\vspace{0.1in}}
+\newcommand{\Lim}[1]{\raisebox{0.5ex}{\scalebox{0.8}{$\displaystyle \lim_{#1}\;$}}}
+
+
+\title{Calculating Volumes Using Cylindrical Shells}
+
+\author{Stephen Styles}
+
+
+\begin{document}
+\maketitle
+
+
+\end{document}

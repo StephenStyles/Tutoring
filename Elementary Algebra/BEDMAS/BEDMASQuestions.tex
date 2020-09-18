@@ -1,0 +1,133 @@
+\documentclass[16pt]{article}
+
+\usepackage{amsmath,amssymb,amsthm,amsfonts,amscd}
+\usepackage{showlabels}
+\usepackage{color}
+\usepackage{hyperref}
+\usepackage[numeric]{amsrefs}
+\usepackage{graphicx}
+
+\usepackage[framemethod=TikZ]{mdframed}
+%\usepackage[framemethod=default]{mdframed}
+
+
+%\mdfdefinestyle{box}{%
+%rightline=true,
+%innerleftmargin=10,
+%innerrightmargin=10,
+%frametitlerule=true,
+%frametitlerulecolor=blue,
+%frametitlebackgroundcolor=white,
+%frametitlerulewidth=2pt}
+
+\mdfdefinestyle{TheoremFrame}{%
+    linecolor=blue,
+    outerlinewidth=1,
+    roundcorner=15,
+    innertopmargin= \baselineskip,
+    innerbottommargin= \baselineskip,
+    innerrightmargin=10,
+    innerleftmargin=10,
+    backgroundcolor=white}
+    
+\mdfdefinestyle{ProofFrame}{%
+    linecolor=red,
+    outerlinewidth=1,
+    roundcorner=15,
+    innertopmargin= \baselineskip,
+    innerbottommargin= \baselineskip,
+    innerrightmargin=10,
+    innerleftmargin=10,
+    backgroundcolor=white}
+    
+    
+\setlength{\oddsidemargin}{0cm}
+\setlength{\evensidemargin}{0cm}
+\setlength{\marginparwidth}{0in}
+\setlength{\marginparsep}{0in}
+\setlength{\marginparpush}{0in}
+\setlength{\topmargin}{0in}
+\setlength{\headheight}{0pt}
+\setlength{\headsep}{0pt}
+\setlength{\footskip}{.3in}
+\setlength{\textheight}{9.2in}
+\setlength{\textwidth}{6.0in}
+\setlength{\parskip}{0.25pt}
+\setlength{\parindent}{0.25in}
+
+    
+\newlength\tindent
+\setlength{\tindent}{\parindent}
+\setlength{\parindent}{0pt}
+\renewcommand{\indent}{\hspace*{\tindent}}
+
+\newtheorem*{nthm}{Theorem}
+\newtheorem*{nlem}{Lemma}
+\newtheorem*{nprop}{Proposition}
+\newtheorem*{ncor}{Corollary}
+\newtheorem*{nconj}{Conjecture}
+\newtheorem*{nclaim}{Claim}
+\theoremstyle{remark}
+\newtheorem*{define}{Definition}
+\newtheorem*{nrem}{Remarks}
+\newtheorem*{notation}{Notation}
+\newtheorem*{note}{Note}
+\newtheorem*{ex}{Example}
+\newtheorem*{imt}{Important}
+\newtheorem*{fact}{Fact}
+\newcommand{\vs}{\vspace{0.1in}}
+\newcommand{\Lim}[1]{\raisebox{0.5ex}{\scalebox{0.8}{$\displaystyle \lim_{#1}\;$}}}
+
+
+\title{BEDMAS}
+
+\author{Stephen Styles}
+
+
+\begin{document}
+\maketitle
+BEDMAS is an acronym that reminds us of the correct order of operations:\\
+\begin{center}
+\begin{tabular}{ l l }
+ \textcolor{red}{B}rackets & \textcolor{red}{First Priority}  \\ 
+ \textcolor{green}{E}xponents & \textcolor{green}{Second Priority } \\  
+ \textcolor{blue}{D}ivision & \textcolor{blue}{Third Priority}  \\
+ \textcolor{blue}{M}ultiplication & \textcolor{blue}{Third Priority}\\
+ \textcolor{purple}{A}ddition & \textcolor{purple}{Fourth Priority}\\
+ \textcolor{purple}{S}ubtraction & \textcolor{purple}{Fourth Priority}\\    
+\end{tabular}
+\end{center}
+This acronym tells us which order to evaluate our expressions. When an expression has multiple operations that are of the same priority, we solve them from left to right.\\
+
+Examples:
+\begin{enumerate}
+\item Simplify $(5\times 6)\times1^2 \div3-8+4$
+\begin{mdframed}[style=TheoremFrame]
+\textit{Solution:}\\
+
+\begin{align*}
+(5\times 6)\times1^2 \div3-8+4 &= 30 \times1^2 \div3-8+4 & \text{Simplifying the bracket}\\
+&= 30 \times1 \div3-8+4 & \text{Solving the exponent}\\
+&= 30 \div 3 -8+4 &\text{Multiplying first since its on the left}\\
+&= 10 - 8 + 4 & \text{Dividing because its the highest priority}\\
+&= 2+4 & \text{Subtracting since it comes first from the left}\\
+&= 6 &
+\end{align*}
+\end{mdframed}
+\item Simplify $(6\times 2 - 5) \times \big((3+9)\times 4 \div 8 \big) \div 1^2-7^2$
+\begin{mdframed}[style=TheoremFrame]
+\textit{Solution:}\\
+
+\end{mdframed}
+\item Simplify $\displaystyle{7^3 + 3\times (4 \times 5 - 2^2 -28 \div 7 +3) + 9 + \frac{3+5}{3-1}}$
+\begin{mdframed}[style=TheoremFrame]
+\textit{Solution:}\\
+
+\end{mdframed}
+\item Simplify $\displaystyle{(6\div (2+4)^{(2^2-4)})^2 + \big(6\times(2+1-2)\big)^2 \div 3}$
+\begin{mdframed}[style=TheoremFrame]
+\textit{Solution:}\\
+
+\end{mdframed}
+\end{enumerate}
+\end{document}
