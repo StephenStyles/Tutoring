@@ -82,10 +82,12 @@
 \title{BEDMAS}
 
 \author{Stephen Styles}
-
+\allowdisplaybreaks
 
 \begin{document}
+
 \maketitle
+\vspace*{-0.1cm}
 BEDMAS is an acronym that reminds us of the correct order of operations:\\
 \begin{center}
 \begin{tabular}{ l l }
@@ -103,31 +105,91 @@ Examples:
 \begin{enumerate}
 \item Simplify $(5\times 6)\times1^2 \div3-8+4$
 \begin{mdframed}[style=TheoremFrame]
-\textit{Solution:}\\
+\textit{Solution:}
+\begin{center}
+\begin{tabular}{l r}
+$(5\times 6)\times 1^2 \div 3-8+4$ &  Simplify the bracket\\
+$ = 30 \times 1^2 \div 3-8+4$ &  Solve the exponent\\
+$= 30 \times1 \div 3-8+4$ &  Multiply first two terms since they're on the left\\
+$= 30 \div 3 -8+4$ &  Dividing because its the highest priority \\
+$= 10 - 8 + 4$ & Subtracting since it comes first from the left\\
+$= 2+4$ & \\
+$= 6$ &\\
+\end{tabular}
+\end{center}
 
-\begin{align*}
-(5\times 6)\times1^2 \div3-8+4 &= 30 \times1^2 \div3-8+4 & \text{Simplifying the bracket}\\
-&= 30 \times1 \div3-8+4 & \text{Solving the exponent}\\
-&= 30 \div 3 -8+4 &\text{Multiplying first since its on the left}\\
-&= 10 - 8 + 4 & \text{Dividing because its the highest priority}\\
-&= 2+4 & \text{Subtracting since it comes first from the left}\\
-&= 6 &
-\end{align*}
 \end{mdframed}
 \item Simplify $(6\times 2 - 5) \times \big((3+9)\times 4 \div 8 \big) \div 1^2-7^2$
 \begin{mdframed}[style=TheoremFrame]
-\textit{Solution:}\\
+\textit{Solution:}
+\begin{center}
+\begin{tabular}{l r}
+$(6\times 2 - 5) \times \big((3+9)\times 4 \div 8 \big) \div 1^2-7^2$ & Simplify the bracket within the bracket\\
+$=(6\times 2 - 5) \times \big(12\times 4 \div 8 \big) \div 1^2-7^2$ & Multiply the first terms in the first bracket\\
+$= (12 - 5) \times \big(12\times 4 \div 8 \big) \div 1^2-7^2$ & Finish simplifying the first bracket\\
+$= 7 \times \big(12\times 4 \div 8 \big) \div 1^2-7^2$ & Multiply the first two terms in the bracket\\
+$= 7 \times \big(48 \div 8 \big) \div 1^2-7^2$ & Finish the bracket\\
+$= 7 \times 6 \div 1^2-7^2$ & Simplify both exponents\\
+$= 7 \times 6 \div 1-49$ & Multiply first since it appears on the left\\
+$= 42 \div 1-49$ & Divide since it has higher priority\\
+$= 42-49$ & \\
+$= -7$ & \\
+\end{tabular}
+\end{center}
 
 \end{mdframed}
 \item Simplify $\displaystyle{7^3 + 3\times (4 \times 5 - 2^2 -28 \div 7 +3) + 9 + \frac{3+5}{3-1}}$
 \begin{mdframed}[style=TheoremFrame]
-\textit{Solution:}\\
+\textit{Solution:}
+\begin{center}
+\begin{tabular}{l r}
+$\displaystyle{7^3 + 3\times (4 \times 5 - 2^2 -28 \div 7 +3) + 9 + \frac{3+5}{3-1}}$ & Rearrange the fraction \\
+$= 7^3 + 3\times (4 \times 5 - 2^2 -28 \div 7 +3) + 9 + (5+3)\div(3-1)$ & Simplify the first bracket\\
+$= 7^3 + 3\times (4 \times 5 - 4 -28 \div 7 +3) + 9 + (5+3)\div(3-1)$ &\\
+$= 7^3 + 3\times (20 - 4 -28 \div 7 +3) + 9 + (5+3)\div(3-1)$ &\\
+$= 7^3 + 3\times (20 - 4 -4 +3) + 9 + (5+3)\div(3-1)$ &\\
+$= 7^3 + 3\times (16 -4 +3) + 9 + (5+3)\div(3-1)$ &\\
+$= 7^3 + 3\times (12 +3) + 9 + (5+3)\div(3-1)$ &\\
+$= 7^3 + 3\times 15 + 9 + (5+3)\div(3-1)$ & Final two brackets\\
+$= 7^3 + 3\times 15 + 9 + 8\div(3-1)$ &\\
+$= 7^3 + 3\times 15 + 9 + 8\div 2$ & Simplify exponent\\
+$= 343 + 3\times 15 + 9 + 8\div 2$ & Multiplication\\
+$= 343 + 45 + 9 + 8\div 2$ & Division\\
+$= 343 + 45 + 9 + 4$ &\\
+$= 388 + 9 + 4$ &\\
+$= 397 + 4$ &\\
+$= 401 $ & 
+\end{tabular}
+\end{center}
 
 \end{mdframed}
 \item Simplify $\displaystyle{(6\div (2+4)^{(2^2-4)})^2 + \big(6\times(2+1-2)\big)^2 \div 3}$
 \begin{mdframed}[style=TheoremFrame]
-\textit{Solution:}\\
-
+\textit{Solution:}
+\begin{center}
+\begin{tabular}{l r}
+$\displaystyle{(6\div (2+4)^{(2^2-4)})^2 + \big(6\times(2+1-2)\big)^2 \div 3}$ & Simplify the bracket in the exponent\\
+$\displaystyle{(6\div (2+4)^{(4-4)})^2 + \big(6\times(2+1-2)\big)^2 \div 3}$ & Finish the subtraction in the exponent\\
+$\displaystyle{(6\div (2+4)^{0})^2 + \big(6\times(2+1-2)\big)^2 \div 3}$ & Simplify bracket within first term\\
+$\displaystyle{(6\div 6^{0})^2 + \big(6\times(2+1-2)\big)^2 \div 3}$ & Exponent within first bracket\\
+$\displaystyle{(6\div 1)^2 + \big(6\times(2+1-2)\big)^2 \div 3}$ & Finish the first bracket\\
+$\displaystyle{6^2 + \big(6\times(2+1-2)\big)^2 \div 3}$ & Simplify bracket within second term\\
+$\displaystyle{6^2 + \big(6\times 1 \big)^2 \div 3}$ & Multiply terms within bracket\\
+$\displaystyle{6^2 + 6^2 \div 3}$ & Calculate the exponents\\
+$\displaystyle{36+ 36 \div 3}$ & Division has higher priority\\
+$\displaystyle{36+ 12}$ & Finally add the remaining terms\\
+$48$ & 
+\end{tabular}
+\end{center}
 \end{mdframed}
+\end{enumerate}
+\newpage
+Questions:
+\begin{enumerate}
+\item Simplify $2 \times (21+29) - 3^2 \times 7$
+\vspace{6cm}
+\item Simplify $7^2 - \big((3\times 6+3)\div 7\big)^3$
+\vspace{6cm} 
+\item Simplify $\displaystyle{6^{(3-2)} \times \big(3+25 \div (1+4) \big)}$
 \end{enumerate}
 \end{document}
