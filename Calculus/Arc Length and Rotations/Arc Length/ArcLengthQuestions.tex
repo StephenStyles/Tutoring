@@ -54,7 +54,7 @@
 \setlength{\textwidth}{6.0in}
 \setlength{\parskip}{0.25pt}
 \setlength{\parindent}{0.25in}
-
+\allowdisplaybreaks
     
 \newlength\tindent
 \setlength{\tindent}{\parindent}
@@ -85,8 +85,9 @@
 
 
 \begin{document}
-\maketitle
 
+\maketitle
+\vspace*{-0.5cm}
 
 Let $y = f(x)$ be a smooth function (twice differentiable) on the interval ${[ a, b ]}$ then the arc length of $f(x)$ on the interval is given by 
 \begin{align*}
@@ -106,9 +107,11 @@ Examples:
 \item Find the arc length of $\displaystyle{f(x) = \frac{x^{3/2}}{3}}$ from $0$ to $5$.
 \begin{mdframed}[style=TheoremFrame]
 \textit{Solution}:
+\vspace*{-0.5cm}
 \begin{align*}
 f'(x) &= \frac{x^{1/2}}{2}
 \end{align*}
+\vspace*{-0.5cm}
 \begin{align*}
 s &= \int_0^5 \sqrt{1 + \bigg(\frac{\sqrt{x}}{2}\bigg)^2}\, dx\\
 &= \int_0^5 \sqrt{1 + \frac{x}{4}}\, dx\\
@@ -118,10 +121,10 @@ s &= \int_0^5 \sqrt{1 + \bigg(\frac{\sqrt{x}}{2}\bigg)^2}\, dx\\
 \end{align*}
 \end{mdframed}
 \newpage
-\item Find the arc length of a function whose derivative is given by $\displaystyle{f'(x) = \frac{1}{2}\bigg(x^2 - \frac{1}{x^2}\bigg)}$ from $\displaystyle{\frac{1}{2}}$ to $2$.
+\item Find the arc length of a function whose derivative is given by $\displaystyle{f'(x) = \frac{1}{2}\bigg(x^2 - \frac{1}{x^2}\bigg)}$\\ from $\displaystyle{\frac{1}{2}}$ to $2$.
 \begin{mdframed}[style=TheoremFrame]
 \textit{Solution}:
-
+\vspace*{-0.5cm}
 \begin{align*}
 s &= \int_{1/2}^2 \sqrt{1+\bigg(\frac{x^2}{2}-\frac{1}{2x^2}\bigg)^2}\, dx\\
 &= \int_{1/2}^2 \sqrt{1+\frac{x^4}{4}-\frac{1}{2}+\frac{1}{4x^4}}\, dx\\
@@ -133,19 +136,26 @@ s &= \int_{1/2}^2 \sqrt{1+\bigg(\frac{x^2}{2}-\frac{1}{2x^2}\bigg)^2}\, dx\\
 \end{align*}
 \end{mdframed}
 
-\item Simplify
+\item  Find the arc length of  $\displaystyle{g(y) = y^2 - \frac{1}{8}\ln(y)}$ from $\displaystyle{1}$ to $2$.
 \begin{mdframed}[style=TheoremFrame]
-\textit{Solution}:\\
-
+\textit{Solution}:
+\vspace*{-0.5cm}
+\begin{align*}
+g'(y) &= 2y-\frac{1}{8y}
+\end{align*}
+\vspace*{-0.5cm}
+\begin{align*}
+s &= \int_1^2 \sqrt{1+\bigg(2y-\frac{1}{8y}\bigg)^2}\, dy\\
+&= \int_1^2 \sqrt{1+4y^2-\frac{1}{2}+\frac{1}{64y^2}}\, dy\\
+&= \int_1^2 \sqrt{4y^2+\frac{1}{2}+\frac{1}{64y^2}}\, dy\\
+&= \int_1^2 \sqrt{\bigg(2y+\frac{1}{8y}\bigg)^2}\, dy\\
+&= \int_1^2 2y+\frac{1}{8y}\, dy\\
+&= y^2 + \frac{\ln(y)}{8} \bigg|_1^2\\
+&= 3+\frac{\ln(y)}{8}
+\end{align*}
 
 \end{mdframed}
-
-\item Simplify
-\begin{mdframed}[style=TheoremFrame]
-\textit{Solution}:\\
-
-
-\end{mdframed}
+\newpage
 \end{enumerate}
 
 Questions:
