@@ -1,6 +1,6 @@
 \documentclass[16pt]{article}
 
-\usepackage{amsmath,amssymb,amsthm,amsfonts,amscd}
+\usepackage{array,amsmath,amssymb,amsthm,amsfonts,amscd}
 \usepackage{showlabels}
 \usepackage{color}
 \usepackage{hyperref}
@@ -19,7 +19,6 @@
 %frametitlerulecolor=blue,
 %frametitlebackgroundcolor=white,
 %frametitlerulewidth=2pt}
-
 \mdfdefinestyle{TheoremFrame}{%
     linecolor=blue,
     outerlinewidth=1,
@@ -161,12 +160,75 @@ s &= \int_1^2 \sqrt{1+\bigg(2y-\frac{1}{8y}\bigg)^2}\, dy\\
 Questions:
 \begin{enumerate}
 \item Find the arc length of $f(x) = \ln(\cos(x))$ from $0$ to $\displaystyle{\frac{\pi}{4}}$.
-\vspace{10cm}
-\item Find the arc length of $f(x) = \cosh(x)$ from $0$ to $1$.
+\begin{mdframed}[style=TheoremFrame]
+\textit{Solution:}
+\begin{align*}
+f'(x) &= \frac{1}{\cos(x)} -\sin(x)\\
+&= -\tan(x)
+\end{align*}
+\begin{align*}
+s&= \int_0^{\frac{\pi}{4}} \sqrt{1+\big(-\tan(x)\big)^2}\,dx\\
+&= \int_0^{\frac{\pi}{4}} \sqrt{1+\tan^2(x)}\, dx\\
+&= \int_0^{\frac{\pi}{4}} \sqrt{\sec^2(x)}\, dx\\
+&= \int_0^{\frac{\pi}{4}} \sec(x) \, dx\\
+&= \ln|\sec(x)+\tan(x)| \bigg|_0^{\frac{\pi}{4}}\\
+&= \ln(\sqrt{2}+1)
+\end{align*}
+\end{mdframed}
+\item Find the arc length of $f(x) = \cosh(x)$ from $0$ to $3\pi$.
+\begin{mdframed}[style=TheoremFrame]
+\textit{Solution:}
+\begin{align*}
+f'(x) &= \sinh(x)
+\end{align*}
+\begin{align*}
+s &= \int_0^{3\pi} \sqrt{1+\sinh^2(x)}\, dx\\
+&= \int_0^{3\pi} \sqrt{\cosh^2(x)}\, dx\\
+&=\int_0^{3\pi} \cosh(x)\, dx\\
+&=\sinh(x) \bigg|_0^{3\pi}\\
+&= \sinh(3\pi)
+\end{align*}
+\end{mdframed}
 \newpage
 \item Find the arc length of $\displaystyle{f(x) = \frac{2}{3x^{1/3}}}$ from $1$ to $8$.
-\vspace{10cm}
+\begin{mdframed}[style=TheoremFrame]
+\textit{Solution:}
+\begin{align*}
+f'(x) &= \frac{2}{3x^{1/3}}
+\end{align*}
+\begin{align*}
+s&= \int_1^8 \sqrt{1+\bigg(\frac{2}{3x^{1/3}}\bigg)^2}\, dx\\
+&= \int_1^8 \sqrt{1+\frac{4}{9x^{2/3}}}\, dx\\
+&= \int_1^8 \sqrt{\frac{9x^{2/3}+4}{9x^{2/3}}}\, dx\\
+&= \frac{1}{3}\int_1^8 \frac{\sqrt{9x^{2/3}+4}}{x^{1/3}}\, dx\\
+\end{align*}
+Let $\displaystyle{u=9x^{2/3}+4}$ then $\displaystyle{du =\frac{6}{x^{1/3}} dx}$\\
+
+$9(1)^{2/3} + 4 = 13$, $9(8)^{2/3}+4=40$
+\begin{align*}
+s &= \frac{1}{18}\int_{13}^{40} u^{1/2} \,du\\
+&= \frac{1}{18}\frac{2}{3} u^{3/2} \bigg|_{13}^{40}\\
+&= \frac{1}{27}\bigg(40^{3/2}-13^{3/2}\bigg)
+\end{align*}
+\end{mdframed}
+\newpage
 \item Find the arc length of $\displaystyle{g(y) = 2y^3 + \frac{1}{24y}}$ from $y=1$ to $y=3$.
+\begin{mdframed}[style=TheoremFrame]
+\textit{Solution:}
+\begin{align*}
+g'(y) &= 6y^2 - \frac{1}{24y^2}
+\end{align*}
+\begin{align*}
+s &= \int_1^3 \sqrt{1+\bigg(6y^2-\frac{1}{24y^2}\bigg)^2}\, dy\\
+&= \int_1^3 \sqrt{1+\big(6y^2\big)^2-\frac{1}{2}+\bigg(\frac{1}{24y^2}\bigg)^2}\, dy\\
+&= \int_1^3 \sqrt{\big(6y^2\big)^2+\frac{1}{2}+\bigg(\frac{1}{24y^2}\bigg)^2}\, dy\\
+&= \int_1^3 \sqrt{\bigg(6y^2+\frac{1}{24y^2}\bigg)^2}\, dy\\
+&= \int_1^3 6y^2+\frac{1}{24y^2}\, dy\\
+&= 2y^3 - \frac{1}{24y} \bigg|_1^3\\
+&= \frac{1873}{36}
+\end{align*}
+
+\end{mdframed}
 \end{enumerate}
 
 
