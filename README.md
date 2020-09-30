@@ -2,7 +2,7 @@
 
 In these repositories I have all the worksheets I've designed to help tutor students through math courses at the University of Alberta. The calculus folder contains all the content for first year calc courses (MATH 134/144/154, MATH 136/146/156, MATH 100, MATH 101). The elementary algebra folder contains the worksheets and solutions I've created for MATH 160.
 
-Within each folder there will be multiple pdfs. One will contain just the questions and the other will contain the solutions. If I don't have anything written up on a topic yet it's probably because I haven't needed it yet while tutoring or just haven't had the time to get to it yet. If you see any issues or want to add more questions to the worksheets you add to the tex file and send it to me or email me the solutions and I'll manually add it. 
+Within each folder there will be multiple pdfs. One will contain just the questions and the other will contain the solutions. If I don't have anything written up on a topic yet it's probably because I haven't needed it yet while tutoring or just haven't had the time to get to it. If you see any issues or want to add more questions to the worksheets you can add to the tex file and send it to me or email me the solutions and I'll manually add it. 
 
 # Additional Resources
 
