@@ -135,15 +135,45 @@ Let $\displaystyle{x-2 = 3\sin(\theta)}$, then $dx = 3 \cos(\theta)\, d\theta$.
 \begin{enumerate}
 
 \item $\displaystyle{\int \sqrt{4-25x^2}\, dx}$
-\vspace{8cm}
+\begin{mdframed}[style=TheoremFrame]
+\textit{Solution:}
 
-\item $\displaystyle{\int \frac{1}{\sqrt{1-9x^2}}\, dx}$
-\vspace{8cm}
+\begin{center}
+Let $\displaystyle{x = \frac{2}{5}\sin(\theta) }$, then $\displaystyle{ dx = \frac{2}{5}\cos(\theta) \, d\theta }$.
+\end{center}
+\begin{align*}
+\int \sqrt{4-25x^2}\, dx &= \frac{2}{5}\int \sqrt{4 - 25\bigg(\frac{2}{5} \sin(\theta)\bigg)^2} \cos(\theta) \, d\theta\\[2ex]
+&= \frac{2}{5}\int \sqrt{4 - 25\bigg(\frac{2}{5} \sin(\theta)\bigg)^2} \cos(\theta) \, d\theta\\[2ex]
+&= \frac{2}{5}\int \sqrt{4 - 4 \sin^2(\theta)} \cos(\theta) \, d\theta\\[2ex]
+&= \frac{2}{5}\int \sqrt{4 \cos^2(\theta)} \cos(\theta) \, d\theta\\[2ex]
+&= \frac{4}{5}\int \cos^2(\theta) \, d\theta\\[2ex]
+&= \frac{4}{5}\int \frac{1+\cos(2\theta)}{2} \, d\theta\\[2ex]
+&= \frac{2}{5}\int 1+\cos(2\theta) \, d\theta\\[2ex]
+&= \frac{2}{5}\bigg( \theta +\frac{\sin(2\theta)}{2} \bigg) +C\\[2ex]
+&= \frac{2}{5}\bigg( \theta +\frac{2\sin(\theta)\cos(\theta)}{2} \bigg) +C\\[2ex]
+&= \frac{2}{5}\bigg( \theta +\sin(\theta)\cos(\theta) \bigg) +C\\[2ex]
+&= \frac{2}{5}\bigg( \sin^{-1}\bigg(\frac{5x}{2}\bigg) +\frac{\sqrt{4-25x^2}}{2}\frac{5x}{2}\bigg)+C\\[2ex]
+&= \frac{2}{5} \sin^{-1}\bigg(\frac{5x}{2}\bigg) +\frac{x\sqrt{4-25x^2}}{2}+C
+\end{align*}
+\end{mdframed}
+\newpage
+\item $\displaystyle{\int \frac{1}{\sqrt{1-9x^2}} \, dx}$
+\begin{mdframed}[style=TheoremFrame]
+\textit{Solution:}
+
+\end{mdframed}
 \newpage
 \item $\displaystyle{\int \frac{1}{x^4\sqrt{9-x^2}}\, dx}$
-\vspace{9cm}
-\item $\displaystyle{\int \frac{\sqrt{16-x^2}}{x^2}\, dx}$
-\vspace{4cm}
+\begin{mdframed}[style=TheoremFrame]
+\textit{Solution:}
+
+\end{mdframed}
+\newpage
+\item $\displaystyle{\int \frac{\sqrt{16-x^2}}{x^2} \,dx}$
+\begin{mdframed}[style=TheoremFrame]
+\textit{Solution:}
+
+\end{mdframed}
 \newpage
 
 \end{enumerate}
@@ -197,16 +227,28 @@ Let $u = e^{2x}$, then $du = 2 \, e^{2x} \, dx$.
 \newpage
 \begin{enumerate}
 \item $\displaystyle{\int \frac{\sqrt{9+x^2}}{x^4}\, dx}$
-\vspace{8cm}
+\begin{mdframed}[style=TheoremFrame]
+\textit{Solution:}
+
+\end{mdframed}
 
 \item $\displaystyle{\int \frac{3x}{x^2+10x+29}\, dx}$
-\vspace{4cm}
+\begin{mdframed}[style=TheoremFrame]
+\textit{Solution:}
+
+\end{mdframed}
 \newpage
 \item $\displaystyle{\int_{-1}^{1} \frac{1}{(1+x^2)^2}\, dx}$
-\vspace{8cm}
+\begin{mdframed}[style=TheoremFrame]
+\textit{Solution:}
+
+\end{mdframed}
 
 \item $\displaystyle{\int \frac{1}{\sqrt{25x^2+16}}\, dx}$
-\vspace{4cm}
+\begin{mdframed}[style=TheoremFrame]
+\textit{Solution:}
+
+\end{mdframed}
 \newpage
 \end{enumerate}
 For integrals of the form $\displaystyle{\int (b^2x^2 -a^2)^n \,dx}$ use $\displaystyle{x=\frac{a\sec(\theta)}{b}}$ as your substitution. The triangle we get from this substitution is:
@@ -259,16 +301,28 @@ Let $u = \tan(\theta)$, then $du = \sec^2(\theta) \, d\theta$.
 \end{mdframed}
 
 \begin{enumerate}
-\item $\displaystyle{\int \frac{1}{\sqrt{25x^2-1}} \, dx}$
-\vspace{9cm}
-\item $\displaystyle{\int \frac{\sqrt{16x^2-9}}{x} \, dx}$
-\vspace{4cm}
+\item $\displaystyle{\int \frac{1}{\sqrt{25x^2-1}}\, dx}$
+\begin{mdframed}[style=TheoremFrame]
+\textit{Solution:}
+
+\end{mdframed}
+\item $\displaystyle{\int \frac{\sqrt{16x^2-9}}{x}\, dx}$
+\begin{mdframed}[style=TheoremFrame]
+\textit{Solution:}
+
+\end{mdframed}
 \newpage
-\item $\displaystyle{\int \frac{1}{x^2\sqrt{x^2-36}}\,  dx}$
-\vspace{9cm}
+\item $\displaystyle{\int \frac{1}{x^2\sqrt{x^2-36}}\, dx}$
+\begin{mdframed}[style=TheoremFrame]
+\textit{Solution:}
+
+\end{mdframed}
 
 \item $\displaystyle{\int \frac{x}{\sqrt{x^2-4}}\, dx}$
-\vspace{4cm}
+\begin{mdframed}[style=TheoremFrame]
+\textit{Solution:}
+
+\end{mdframed}
 
 
 \end{enumerate}
